@@ -1,10 +1,10 @@
 #coding=utf-8
 from urllib import urlencode
-import urllib,urllib2,cookielib,re,os
+import urllib,urllib2,cookielib,re
 
 #config
-username='redswallowjysc@126.com'
-password='901212jysc'
+username='YOUR USERNAME'
+password='YOUR PASSWORD'
 logurl='https://www.douban.com/accounts/login'
 
 
@@ -45,8 +45,6 @@ def login():
 def login_params(params):
     #cookie
     cj=cookielib.LWPCookieJar()
-    if os.path.isfile('douban.cookie'):
-        cj.load('douban.cookie')
     opener=urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
     urllib2.install_opener(opener)
     url_data=urlencode(params)
