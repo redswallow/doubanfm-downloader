@@ -29,8 +29,10 @@ def get_songs(board):
 board_list=get_board_list(bubbler_url,user)
 board=get_board(board_list,index=1)
 songs=get_songs(board)
+songs_url=[]
 for id in songs:
-    print id
-    #url_data=openchannel_download.build_search_url(id)
-    #songs=openchannel_download.get_songs(openchannel_download.url,url_data,openchannel_download.cookie)
-    #print songs
+    url_data=openchannel_download.build_search_url(id)
+    song=openchannel_download.get_songs(openchannel_download.url,url_data,openchannel_download.cookie)
+    songs_url+=song
+#print songs_url
+openchannel_download.download(songs_url)
