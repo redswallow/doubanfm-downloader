@@ -11,7 +11,7 @@ project_path='D:\Programming\pythonproject\doubanfm_download\\'
 download_path='E:\music\\'
 cookie='__gads=ID=08ce925192e11b7f:T=1327204443:S=ALNI_Mbeo1XXfCrK9ChIhCuhEWrzUyQs-w; openExpPan=Y; flag="ok"; ck="drmb"; dbcl2="2386246:qSC8IzUu8dU"; bid="ICkabR3Dm3E"; __utma=58778424.1121407106.1345636011.1348365368.1348371030.59; __utmc=58778424; __utmz=58778424.1348371030.59.42.utmcsr=douban.com|utmccn=(referral)|utmcmd=referral|utmcct=/; __utmv=58778424.238'
 
-def build_search_url(keyword,cate,limit):
+def build_search_url(keyword,cate='msic',limit='20'):
     data={'keyword':keyword,
           'cate':cate,
           'limit':limit
